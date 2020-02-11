@@ -4,8 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Planning Poker Online</title>
+
+  <script src="/socket.io/socket.io.js"></script>
 </head>
 <body>
-  Planning Poker Online
+  Planning Poker Online!!!
+
+  <script type="module">
+    const socket = io();
+
+    socket.on('connect', () => {
+      const playerId = socket.id;
+      console.log(`Player connected on Client with id: ${playerId}`);
+    });
+  </script>
 </body>
 </html>
